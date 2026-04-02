@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="noise-bg relative min-h-screen">
       <Navbar />
-      <main className="flex flex-col gap-10 md:gap-14 pt-16 pb-24 md:pb-32">
+      <main className="flex flex-col gap-14 md:gap-20 pt-20 md:pt-24 pb-28 md:pb-36">
         <Hero />
         <Stats />
         <FeaturedProjects />

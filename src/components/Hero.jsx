@@ -72,7 +72,7 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-[92vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-10 md:pb-16"
+      className="relative min-h-[92vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-16 md:pb-24"
       id="hero"
     >
       {/* Background orbs */}
@@ -84,30 +84,30 @@ export default function Hero() {
 
       <div className="section-container relative z-10 text-center max-w-4xl flex flex-col items-center">
         {/* Tag */}
-        <div className="hero-tag opacity-0 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border mb-8 text-sm text-text-muted">
+        <div className="hero-tag opacity-0 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border mb-10 text-sm text-text-muted">
           <span className="w-2 h-2 rounded-full bg-green animate-pulse" />
           Available for opportunities
         </div>
 
         {/* Name */}
-        <h1 className="hero-name opacity-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-5 sm:mb-6">
+        <h1 className="hero-name opacity-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 sm:mb-7">
           Hi, I&apos;m{' '}
           <span className="gradient-text">Saravanabhavan</span>
         </h1>
 
         {/* Typed title */}
-        <div className="hero-title opacity-0 text-xl sm:text-2xl md:text-3xl font-semibold text-accent-bright mb-5 sm:mb-6 min-h-[2.75rem]">
+        <div className="hero-title opacity-0 text-xl sm:text-2xl md:text-3xl font-semibold text-accent-bright mb-6 sm:mb-7 min-h-[2.75rem]">
           <span>{displayText}</span>
           <span className="cursor-blink" />
         </div>
 
         {/* Description */}
-        <p className="hero-desc opacity-0 text-base sm:text-lg text-text-muted max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
+        <p className="hero-desc opacity-0 text-base sm:text-lg text-text-muted max-w-2xl mx-auto mb-10 sm:mb-12 leading-relaxed">
           Backend-focused developer with experience in FastAPI, Node.js, Express.js, cloud deployment, and GenAI applications. Interested in scalable backend systems, AI-powered tools, and real-world software products.
         </p>
 
         {/* CTA Buttons */}
-        <div className="hero-btns opacity-0 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mb-10 sm:mb-12">
+        <div className="hero-btns opacity-0 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mb-12 sm:mb-14">
           <a
             href="#projects"
             onClick={(e) => {
@@ -131,7 +131,7 @@ export default function Hero() {
         </div>
 
         {/* Social links */}
-        <div className="hero-socials opacity-0 flex items-center justify-center gap-4">
+        <div className="hero-socials opacity-0 flex items-center justify-center gap-5">
           {[
             { icon: FiGithub, href: LINKS.githubProfile, label: 'GitHub' },
             { icon: FaXTwitter, href: LINKS.x, label: 'X / Twitter' },

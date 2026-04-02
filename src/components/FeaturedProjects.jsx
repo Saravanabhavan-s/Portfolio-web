@@ -1,3 +1,4 @@
+import { useEffect, useMemo, useState } from 'react'
 import { FiGithub, FiExternalLink } from 'react-icons/fi'
 import useScrollReveal from '../hooks/useScrollReveal'
 import { LINKS } from '../config/links'
@@ -11,8 +12,14 @@ const PROJECTS = [
     tech: ['Python', 'FastAPI', 'LangChain', 'Whisper', 'React', 'Milvus', 'Vector DB'],
     github: LINKS.summarizerRepo,
     live: '#',
-    gradient: 'from-indigo-500/20 via-purple-500/20 to-pink-500/20',
-    accent: '#818cf8',
+    file: 'echoscore.audit.ts',
+    introLines: [
+      '$ init audit-pipeline --source chats,calls',
+      '> loading whisper transcription + diarization',
+      '> indexing support logs in vector db (milvus)',
+      '> scoring with llm rubric and compliance checks',
+      '> exposing insights via fastapi analytics endpoints',
+    ],
   },
   {
     title: 'Weather Song Recommender',
@@ -22,16 +29,105 @@ const PROJECTS = [
     tech: ['Flask', 'OpenWeather API', 'YouTube API', 'HTML', 'CSS', 'JavaScript'],
     github: LINKS.weatherSongRepo,
     live: '#',
-    gradient: 'from-emerald-500/20 via-teal-500/20 to-cyan-500/20',
-    accent: '#34d399',
+    file: 'weather-mood.flow.js',
+    introLines: [
+      '$ fetch weather --city Chennai',
+      '> humidity: 76% | condition: cloudy',
+      '> mapping weather profile to mood vectors',
+      '> ranking youtube tracks with weighted tags',
+      '> serving playlist recommendations via flask api',
+    ],
   },
 ]
+
+function TerminalPreview({ project }) {
+  const [typedLength, setTypedLength] = useState(0)
+
+  const fullScript = useMemo(
+    () => project.introLines.join('\n'),
+    [project.introLines]
+  )
+
+  useEffect(() => {
+    let frameTimer
+    let resetTimer
+
+    const startTyping = () => {
+      let idx = 0
+      frameTimer = setInterval(() => {
+        idx += 1
+        setTypedLength(idx)
+
+        if (idx >= fullScript.length) {
+          clearInterval(frameTimer)
+          resetTimer = setTimeout(() => {
+            setTypedLength(0)
+            startTyping()
+          }, 1600)
+        }
+      }, 22)
+    }
+
+    startTyping()
+
+    return () => {
+      clearInterval(frameTimer)
+      clearTimeout(resetTimer)
+    }
+  }, [fullScript])
+
+  const typedText = fullScript.slice(0, typedLength)
+
+  return (
+    <div className="relative rounded-2xl overflow-hidden border border-border bg-[#0b0d18] shadow-[0_20px_60px_-40px_rgba(0,0,0,0.7)]">
+      <div className="flex items-center justify-between px-4 md:px-5 py-3 border-b border-border bg-[#101427]">
+        <div className="flex items-center gap-2">
+          <span className="w-2.5 h-2.5 rounded-full bg-rose-400" />
+          <span className="w-2.5 h-2.5 rounded-full bg-amber-300" />
+          <span className="w-2.5 h-2.5 rounded-full bg-green-400" />
+        </div>
+        <span className="text-xs md:text-sm font-mono text-text-dim">{project.file}</span>
+        <div className="w-12" />
+      </div>
+
+      <div className="aspect-video px-4 md:px-6 py-4 md:py-5 font-mono text-[11px] sm:text-xs md:text-sm leading-relaxed text-text-muted bg-[linear-gradient(180deg,#101325_0%,#0b0d18_100%)]">
+        <pre className="whitespace-pre-wrap break-words">
+          {typedText}
+          <span className="cursor-blink" />
+        </pre>
+      </div>
+
+      <div className="px-4 md:px-6 py-3 md:py-4 border-t border-border bg-black/20 flex items-center gap-4">
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-text-muted hover:text-accent transition-colors inline-flex items-center gap-2"
+          aria-label={`${project.title} GitHub`}
+        >
+          <FiGithub className="w-4 h-4" />
+          GitHub
+        </a>
+        <a
+          href={project.live}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-text-muted hover:text-accent transition-colors inline-flex items-center gap-2"
+          aria-label={`${project.title} Live Demo`}
+        >
+          <FiExternalLink className="w-4 h-4" />
+          Live
+        </a>
+      </div>
+    </div>
+  )
+}
 
 export default function FeaturedProjects() {
   const sectionRef = useScrollReveal()
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-28 relative z-10" id="projects">
+    <section ref={sectionRef} className="py-20 md:py-32 relative z-10" id="projects">
       <div className="section-container">
         {/* Header */}
         <div className="section-header" data-reveal="up">
@@ -45,53 +141,18 @@ export default function FeaturedProjects() {
         </div>
 
         {/* Project cards */}
-        <div className="flex flex-col gap-14 md:gap-24">
+        <div className="flex flex-col gap-16 md:gap-24">
           {PROJECTS.map((project, i) => {
             const isEven = i % 2 === 1
             return (
               <div
                 key={project.title}
                 data-reveal={isEven ? 'right' : 'left'}
-                className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center"
+                className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-center"
               >
                 {/* Preview */}
                 <div className={`w-full ${isEven ? 'md:order-last' : ''}`}>
-                  <div
-                    className={`relative rounded-2xl overflow-hidden aspect-video bg-gradient-to-br ${project.gradient} border border-border group`}
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center p-8">
-                        <div
-                          className="text-4xl md:text-5xl font-extrabold mb-2 opacity-30"
-                          style={{ color: project.accent }}
-                        >
-                          {project.title}
-                        </div>
-                        <div className="text-sm text-text-muted opacity-50">{project.subtitle}</div>
-                      </div>
-                    </div>
-                    {/* Hover overlay */}
-                    <div className="absolute inset-0 bg-bg/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-text hover:bg-accent/30 transition-colors"
-                        aria-label={`${project.title} GitHub`}
-                      >
-                        <FiGithub className="w-5 h-5" />
-                      </a>
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-text hover:bg-accent/30 transition-colors"
-                        aria-label={`${project.title} Live Demo`}
-                      >
-                        <FiExternalLink className="w-5 h-5" />
-                      </a>
-                    </div>
-                  </div>
+                  <TerminalPreview project={project} />
                 </div>
 
                 {/* Info */}
@@ -99,13 +160,13 @@ export default function FeaturedProjects() {
                   <span className="text-sm font-mono text-accent mb-2 block">
                     Featured Project
                   </span>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-3">{project.title}</h3>
-                  <div className="glass rounded-xl p-5 md:p-6 mb-5">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4">{project.title}</h3>
+                  <div className="glass rounded-xl p-6 md:p-7 mb-6">
                     <p className="text-text-muted text-sm md:text-base leading-relaxed">
                       {project.description}
                     </p>
                   </div>
-                  <div className={`flex flex-wrap gap-2 mb-5 justify-center md:justify-start ${isEven ? 'md:justify-end' : ''}`}>
+                  <div className={`flex flex-wrap gap-2.5 mb-6 justify-center md:justify-start ${isEven ? 'md:justify-end' : ''}`}>
                     {project.tech.map((t) => (
                       <span
                         key={t}

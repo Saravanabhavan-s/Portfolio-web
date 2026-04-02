@@ -24,7 +24,7 @@ export default function About() {
   const sectionRef = useScrollReveal()
 
   return (
-    <section ref={sectionRef} className="py-20 md:py-32 relative z-10" id="about">
+    <section ref={sectionRef} className="py-24 md:py-36 relative z-10" id="about">
       <div className="section-container">
         {/* Header */}
         <div className="section-header" data-reveal="up">
@@ -38,9 +38,9 @@ export default function About() {
         </div>
 
         {/* Two-column layout */}
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
           {/* Text column */}
-          <div className="w-full lg:w-1/2 space-y-5" data-reveal="left">
+          <div className="w-full lg:w-1/2 space-y-6" data-reveal="left">
             {ABOUT_DATA.bio.map((paragraph, i) => (
               <p key={i} className="text-text-muted leading-relaxed text-sm md:text-base">
                 {paragraph}
@@ -59,7 +59,7 @@ export default function About() {
                   {ABOUT_DATA.terminal.name}
                 </span>
               </div>
-              <div className="p-5 text-sm leading-relaxed overflow-x-auto">
+              <div className="p-6 md:p-7 text-sm leading-relaxed overflow-x-auto">
                 <pre className="text-text-muted">
                   <code>
                     <span className="text-text-dim">{'{'}</span>

@@ -31,7 +31,7 @@ export default function Achievements() {
   const sectionRef = useScrollReveal()
 
   return (
-    <section ref={sectionRef} className="py-24 md:py-36 relative z-10" id="achievements">
+    <section ref={sectionRef} className="py-20 md:py-32 relative z-10" id="achievements">
       <div className="section-container">
         {/* Header */}
         <div className="section-header" data-reveal="up">
@@ -46,13 +46,13 @@ export default function Achievements() {
 
         {/* Grid */}
         <div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7"
           data-reveal-stagger
         >
           {ACHIEVEMENTS.map((item) => (
             <div
               key={item.title}
-              className="glass rounded-2xl p-6 glow-border-hover transition-all duration-300 hover:-translate-y-1 group"
+              className="glass rounded-2xl p-7 glow-border-hover transition-all duration-300 hover:-translate-y-1 group"
             >
               <div className="flex items-start gap-4">
                 <span className="text-3xl group-hover:scale-110 transition-transform">

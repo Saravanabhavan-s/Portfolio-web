@@ -25,12 +25,12 @@ export default function Footer() {
   }
 
   return (
-    <footer ref={sectionRef} className="relative z-20 mt-8 md:mt-12 border-t border-border bg-bg/80 backdrop-blur-sm">
+    <footer ref={sectionRef} className="relative z-10 mt-12 md:mt-16 border-t border-border bg-bg/80 backdrop-blur-sm">
       {/* Gradient top line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent" />
 
-      <div className="section-container py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 items-start" data-reveal-stagger>
+      <div className="section-container py-16 md:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 items-start" data-reveal-stagger>
           {/* Brand */}
           <div className="text-center md:text-left max-w-xs md:max-w-sm md:justify-self-start">
             <a
@@ -88,7 +88,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom line */}
-        <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-text-dim text-center md:text-left">
+        <div className="mt-14 pt-7 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-text-dim text-center md:text-left">
           <span className="leading-relaxed">© {new Date().getFullYear()} Saravanabhavan S. All rights reserved.</span>
           <span className="flex items-center gap-1.5">
             Built with React &{' '}

@@ -37,7 +37,7 @@ export default function OtherProjects() {
   const sectionRef = useScrollReveal()
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-24 relative z-10">
+    <section ref={sectionRef} className="py-20 md:py-28 relative z-10">
       <div className="section-container">
         {/* Header */}
         <div className="section-header" data-reveal="up">
@@ -48,11 +48,11 @@ export default function OtherProjects() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-5" data-reveal-stagger>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-7" data-reveal-stagger>
           {PROJECTS.map((project) => (
             <div
               key={project.title}
-              className="glass rounded-2xl p-6 flex flex-col glow-border-hover transition-all duration-300 hover:-translate-y-2 group"
+              className="glass rounded-2xl p-7 md:p-8 flex flex-col glow-border-hover transition-all duration-300 hover:-translate-y-2 group"
             >
               {/* Top row */}
               <div className="flex items-center justify-between mb-5">

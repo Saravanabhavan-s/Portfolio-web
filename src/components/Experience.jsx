@@ -70,7 +70,7 @@ export default function Experience() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-24 md:py-40 relative z-10" id="experience">
+    <section ref={sectionRef} className="py-24 md:py-36 relative z-10" id="experience">
       <div className="section-container">
         {/* Header */}
         <div className="section-header" data-reveal="up">
@@ -93,7 +93,7 @@ export default function Experience() {
           />
 
           {/* Cards */}
-          <div className="flex flex-col gap-14 md:gap-20">
+          <div className="flex flex-col gap-16 md:gap-20">
             {EXPERIENCES.map((exp, i) => {
               const isEven = i % 2 === 0
               return (
@@ -103,7 +103,7 @@ export default function Experience() {
                   data-reveal-delay={String(i * 0.05)}
                   className={`relative flex flex-col md:flex-row ${
                     isEven ? '' : 'md:flex-row-reverse'
-                  } gap-8 md:gap-10`}
+                  } gap-9 md:gap-12`}
                 >
                   {/* Dot */}
                   <div
@@ -116,7 +116,7 @@ export default function Experience() {
 
                   {/* Card */}
                   <div className="ml-10 md:ml-0 md:w-1/2">
-                    <div className="glass rounded-2xl p-6 md:p-7 glow-border-hover transition-all duration-300 hover:-translate-y-1">
+                    <div className="glass rounded-2xl p-7 md:p-8 glow-border-hover transition-all duration-300 hover:-translate-y-1">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                         <h3 className="text-lg font-bold text-text">{exp.role}</h3>
                         <span className="text-xs font-mono text-accent bg-accent/10 px-3 py-1 rounded-full whitespace-nowrap">

@@ -71,7 +71,11 @@ export default function Technologies() {
   const sectionRef = useScrollReveal()
 
   return (
-    <section ref={sectionRef} className="pt-24 pb-32 mb-8 md:pt-36 md:pb-48 md:mb-12 relative z-10" id="tech">
+    <section
+      ref={sectionRef}
+      className="pt-20 md:pt-32 pb-28 md:pb-40 mb-6 md:mb-10 relative z-10"
+      id="tech"
+    >
       <div className="section-container">
         {/* Header */}
         <div className="section-header" data-reveal="up">
@@ -85,14 +89,14 @@ export default function Technologies() {
         </div>
 
         {/* Categories */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-7" data-reveal-stagger>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7 md:gap-8" data-reveal-stagger>
           {CATEGORIES.map((cat, i) => (
             <div
               key={cat.name}
               className={`glass rounded-2xl p-6 glow-border-hover transition-all duration-300 hover:-translate-y-1 ${i === CATEGORIES.length - 1 ? 'md:col-span-2 xl:col-span-1' : ''}`}
             >
               <h3
-                className="text-lg font-bold mb-5 flex items-center gap-2"
+                className="text-lg font-bold mb-6 flex items-center gap-2"
                 style={{ color: cat.color }}
               >
                 <span
@@ -101,7 +105,7 @@ export default function Technologies() {
                 />
                 {cat.name}
               </h3>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-3.5">
                 {cat.items.map((item) => (
                   <div
                     key={item.name}

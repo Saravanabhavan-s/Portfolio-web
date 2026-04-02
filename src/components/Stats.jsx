@@ -42,15 +42,15 @@ export default function Stats() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-14 md:py-24 relative z-10">
+    <section ref={sectionRef} className="py-18 md:py-28 relative z-10">
       <div className="section-container">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 md:gap-7">
           {STATS.map((stat, i) => (
             <div
               key={stat.label}
               data-reveal="up"
               data-reveal-delay={String(i * 0.05)}
-              className="glass rounded-2xl min-h-[145px] sm:min-h-[155px] p-5 sm:p-6 md:p-8 text-center glow-border-hover transition-all duration-300 hover:-translate-y-1 group flex flex-col items-center justify-center"
+              className="glass rounded-2xl min-h-[155px] sm:min-h-[170px] p-6 sm:p-7 md:p-8 text-center glow-border-hover transition-all duration-300 hover:-translate-y-1 group flex flex-col items-center justify-center"
             >
               <div className="text-2xl mb-2.5 group-hover:scale-110 transition-transform">{stat.icon}</div>
               <div className="text-3xl md:text-4xl font-extrabold text-text mb-1 flex items-center justify-center gap-0.5 leading-none">
