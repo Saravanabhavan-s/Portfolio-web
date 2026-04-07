@@ -5,21 +5,35 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FiGithub, FiExternalLink, FiArrowUpRight, FiX } from 'react-icons/fi';
 import { PROJECTS, type Project } from '@/lib/constants';
 import { ScrollReveal, TextMaskReveal } from '@/components/shared/ScrollReveal';
+import { useLenis } from '@/components/shared/LenisProvider';
 import { staggerContainer, fadeUp } from '@/lib/animations';
 
 export function Work() {
   const featured = PROJECTS.filter((p) => p.featured);
   const others = PROJECTS.filter((p) => !p.featured);
   const [terminalProject, setTerminalProject] = useState<Project | null>(null);
+  const lenis = useLenis();
 
   // Lock body scroll when modal is open
   useEffect(() => {
-    document.body.style.overflow = terminalProject ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
-  }, [terminalProject]);
+    if (terminalProject) {
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+      lenis?.stop();
+    } else {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+      lenis?.start();
+    }
+    return () => {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+      lenis?.start();
+    };
+  }, [terminalProject, lenis]);
 
   return (
-    <section id="work" className="relative z-10 py-32 md:py-44">
+    <section id="work" className={`relative py-32 md:py-44 ${terminalProject ? 'z-[100]' : 'z-10'}`}>
       <div className="section-container">
         <TextMaskReveal className="mb-6">
           <h2 className="text-3xl sm:text-4xl font-bold text-text leading-tight">
@@ -188,16 +202,21 @@ function SparklineGraph({ data, color }: { data: number[]; color: string }) {
    ═══════════════════════════════════════════════════════ */
 function TerminalOverlay({ project, onClose }: { project: Project; onClose: () => void }) {
   const lines = [
-    `❯ cat ${project.title.toLowerCase().replace(/\s+/g, '-')}.md`,
+    `❯ ./inspect --project="${project.title}"`,
+    `[INFO] Locating project data... OK`,
     ``,
-    `${project.title}`,
-    `${project.subtitle}`,
+    `NAME:    ${project.title}`,
+    `TYPE:    ${project.subtitle}`,
+    `STATUS:  ${project.live ? 'Deployed (Live)' : 'Development / Repository only'}`,
+    `GITHUB:  ${project.github ? 'Available' : 'Private'}`,
     ``,
-    `Stack:`,
-    ...project.tech.map((t) => `  → ${t}`),
+    `[INFO] Analyzing tech stack...`,
+    ...project.tech.map((t) => `  [+] Loaded dependency: ${t}`),
     ``,
-    `${project.description}`,
+    `[INFO] Fetching core description...`,
+    ...project.description.split('. ').filter((s) => s.trim().length > 0).map((s) => `  > ${s.trim()}${s.trim().endsWith('.') ? '' : '.'}`),
     ``,
+    `[INFO] Project analysis complete.`,
     `❯ _`,
   ];
 
@@ -265,11 +284,11 @@ function TerminalOverlay({ project, onClose }: { project: Project; onClose: () =
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.95, opacity: 0, y: 10 }}
         transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-        className="relative w-full max-w-2xl rounded-xl border border-border bg-[#0A0A0C] overflow-hidden shadow-2xl"
+        className="relative w-full max-w-5xl rounded-xl border border-border bg-[#0A0A0C] overflow-hidden shadow-2xl h-[75vh] md:h-[650px] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-5 py-3 border-b border-border">
+        <div className="flex items-center justify-between px-5 py-3 border-b border-border shrink-0">
           <span className="text-[11px] font-mono text-text-dim">
             ~/{project.title.toLowerCase().replace(/\s+/g, '-')}
           </span>
@@ -279,7 +298,10 @@ function TerminalOverlay({ project, onClose }: { project: Project; onClose: () =
         </div>
 
         {/* Terminal content */}
-        <div className="p-6 md:p-8 font-mono text-[13px] leading-[1.8] min-h-[300px] max-h-[60vh] overflow-y-auto">
+        <div 
+          className="p-6 md:p-8 font-mono text-[13px] md:text-sm leading-[1.8] flex-1 overflow-y-auto"
+          data-lenis-prevent="true"
+        >
           {typedLines.map((line, i) => (
             <div key={i} className="min-h-[1.5rem]">
               {line.startsWith('❯') ? (
@@ -290,12 +312,14 @@ function TerminalOverlay({ project, onClose }: { project: Project; onClose: () =
                     <span className="inline-block w-2 h-3.5 bg-accent/60 animate-pulse ml-0.5 align-middle" />
                   )}
                 </span>
-              ) : line.startsWith('  →') ? (
+              ) : line.startsWith('  [+]') ? (
                 <span className="text-text-muted">{line}</span>
-              ) : line === project.title ? (
+              ) : line.startsWith('NAME:') ? (
                 <span className="text-text font-semibold text-base">{line}</span>
-              ) : line === 'Stack:' ? (
+              ) : line.startsWith('TYPE:') ? (
                 <span className="text-accent/80 font-semibold">{line}</span>
+              ) : line.startsWith('[INFO]') ? (
+                <span className="text-accent/50">{line}</span>
               ) : line === '' ? null : (
                 <span className="text-text-dim">{line}</span>
               )}

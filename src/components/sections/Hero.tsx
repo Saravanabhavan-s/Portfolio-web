@@ -83,7 +83,7 @@ export function Hero() {
     <section
       ref={heroRef}
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-32 md:pt-40 md:pb-40"
     >
       {/* Grid background */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]"
@@ -98,6 +98,16 @@ export function Hero() {
         <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-80 md:h-80 rounded-full bg-accent/8 blur-[100px]" style={{ animation: 'float 6s ease-in-out infinite' }} />
         <div className="absolute bottom-1/3 right-1/4 w-48 h-48 md:w-72 md:h-72 rounded-full bg-chart-2/8 blur-[80px]" style={{ animation: 'float 8s ease-in-out infinite', animationDelay: '1s' }} />
       </div>
+
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-56 md:h-72"
+        aria-hidden="true"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(10,10,11,0) 0%, rgba(10,10,11,0.72) 60%, rgba(10,10,11,1) 100%)',
+          backdropFilter: 'blur(10px)',
+          WebkitBackdropFilter: 'blur(10px)',
+        }}
+      />
 
       <div className="section-container relative z-10 text-center max-w-3xl flex flex-col items-center">
         {/* Availability tag */}
@@ -123,18 +133,23 @@ export function Hero() {
           <span className="inline-block w-0.5 h-[1.2em] bg-accent ml-1 animate-pulse align-middle" />
         </div>
 
+        {/* Education */}
+        <p className="hero-education opacity-0 text-sm sm:text-base text-text-muted font-mono tracking-wide mb-8">
+          Sathyabama Institute of Science and Technology · B.E CSE
+        </p>
+
         {/* Description */}
         <p className="hero-desc opacity-0 text-[15px] md:text-base text-text-muted max-w-xl mx-auto mb-10 leading-relaxed">
           I architect scalable backend systems, build GenAI applications, and ship products that matter.
         </p>
 
         {/* Status terminal card */}
-        <div className="hero-terminal opacity-0 w-full max-w-lg mb-12">
-          <div className="rounded-xl border border-border bg-[#0C0C0E] overflow-hidden text-left">
-            <div className="px-4 py-2.5 border-b border-border flex items-center">
+        <div className="hero-terminal relative z-20 opacity-0 w-full max-w-2xl mb-12">
+          <div className="rounded-2xl border border-border bg-[#0C0C0E]/95 shadow-[0_24px_80px_rgba(0,0,0,0.35)] overflow-hidden text-left backdrop-blur-md">
+            <div className="px-5 py-3 border-b border-border flex items-center">
               <span className="text-[11px] font-mono text-text-dim">~/status</span>
             </div>
-            <div className="p-5 font-mono text-[12px] leading-relaxed">
+            <div className="p-6 md:p-7 font-mono text-[13px] md:text-sm leading-relaxed">
               <div className="flex gap-2 text-text-muted">
                 <span className="text-accent">❯</span>
                 <span className="text-text font-medium">cat current.md</span>
@@ -145,9 +160,9 @@ export function Hero() {
                 <div><span className="text-text-dim">→</span> working with FastAPI, LangChain, RAG pipelines</div>
                 <div><span className="text-text-dim">→</span> stack: Python, Node.js, React, Docker</div>
               </div>
-              <div className="mt-3 flex gap-2">
+              <div className="mt-4 flex gap-2">
                 <span className="text-accent">❯</span>
-                <span className="inline-block w-2 h-3.5 bg-accent/60 animate-pulse" />
+                <span className="inline-block w-2.5 h-4 bg-accent/60 animate-pulse" />
               </div>
             </div>
           </div>
@@ -188,10 +203,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Education row */}
-      <div className="absolute bottom-10 left-0 right-0 flex items-center justify-center text-[11px] text-text-dim font-mono">
-        Sathyabama Institute · B.Tech CSE
-      </div>
     </section>
   );
 }

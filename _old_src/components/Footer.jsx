@@ -21,19 +21,23 @@ export default function Footer() {
       />
       <div className="section-container pt-12 pb-10 md:pt-12 md:pb-12">
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left" data-reveal="up">
             <p className="text-xl font-semibold text-text/80">Saravanabhavan S</p>
             <p className="mt-1 text-sm text-text-muted/70">&copy; {new Date().getFullYear()}</p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-2 text-sm text-text-muted/70">
+          <div
+            className="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-2 text-sm text-text-muted/70"
+            data-reveal-stagger
+          >
             {FOOTER_LINKS.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                target={link.label === 'Email' ? undefined : '_blank'}
-                rel={link.label === 'Email' ? undefined : 'noopener noreferrer'}
+                target={link.href.startsWith('mailto:') ? undefined : '_blank'}
+                rel={link.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
                 className="transition-colors hover:text-text"
+                data-reveal="fade"
               >
                 {link.label}
               </a>

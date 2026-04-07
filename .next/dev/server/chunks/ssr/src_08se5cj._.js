@@ -177,7 +177,7 @@ function Hero() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         ref: heroRef,
         id: "hero",
-        className: "relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28",
+        className: "relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-32 md:pt-40 md:pb-40",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute inset-0 pointer-events-none opacity-[0.03]",
@@ -223,6 +223,19 @@ function Hero() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-56 md:h-72",
+                "aria-hidden": "true",
+                style: {
+                    background: 'linear-gradient(to bottom, rgba(10,10,11,0) 0%, rgba(10,10,11,0.72) 60%, rgba(10,10,11,1) 100%)',
+                    backdropFilter: 'blur(10px)',
+                    WebkitBackdropFilter: 'blur(10px)'
+                }
+            }, void 0, false, {
+                fileName: "[project]/src/components/sections/Hero.tsx",
+                lineNumber: 102,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "section-container relative z-10 text-center max-w-3xl flex flex-col items-center",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -232,14 +245,14 @@ function Hero() {
                                 className: "w-1.5 h-1.5 rounded-full bg-green animate-pulse"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/sections/Hero.tsx",
-                                lineNumber: 105,
+                                lineNumber: 115,
                                 columnNumber: 11
                             }, this),
                             __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SITE"].tagline
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/sections/Hero.tsx",
-                        lineNumber: 104,
+                        lineNumber: 114,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -250,7 +263,7 @@ function Hero() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/sections/Hero.tsx",
-                        lineNumber: 110,
+                        lineNumber: 120,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -263,13 +276,13 @@ function Hero() {
                                 children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SITE"].name
                             }, void 0, false, {
                                 fileName: "[project]/src/components/sections/Hero.tsx",
-                                lineNumber: 117,
+                                lineNumber: 127,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/sections/Hero.tsx",
-                        lineNumber: 115,
+                        lineNumber: 125,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -279,20 +292,28 @@ function Hero() {
                                 children: displayText
                             }, void 0, false, {
                                 fileName: "[project]/src/components/sections/Hero.tsx",
-                                lineNumber: 122,
+                                lineNumber: 132,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "inline-block w-0.5 h-[1.2em] bg-accent ml-1 animate-pulse align-middle"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/sections/Hero.tsx",
-                                lineNumber: 123,
+                                lineNumber: 133,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/sections/Hero.tsx",
-                        lineNumber: 121,
+                        lineNumber: 131,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "hero-education opacity-0 text-sm sm:text-base text-text-muted font-mono tracking-wide mb-8",
+                        children: "Sathyabama Institute of Science and Technology · B.E CSE"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/sections/Hero.tsx",
+                        lineNumber: 137,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -300,31 +321,31 @@ function Hero() {
                         children: "I architect scalable backend systems, build GenAI applications, and ship products that matter."
                     }, void 0, false, {
                         fileName: "[project]/src/components/sections/Hero.tsx",
-                        lineNumber: 127,
+                        lineNumber: 142,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "hero-terminal opacity-0 w-full max-w-lg mb-12",
+                        className: "hero-terminal relative z-20 opacity-0 w-full max-w-2xl mb-12",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "rounded-xl border border-border bg-[#0C0C0E] overflow-hidden text-left",
+                            className: "rounded-2xl border border-border bg-[#0C0C0E]/95 shadow-[0_24px_80px_rgba(0,0,0,0.35)] overflow-hidden text-left backdrop-blur-md",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "px-4 py-2.5 border-b border-border flex items-center",
+                                    className: "px-5 py-3 border-b border-border flex items-center",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "text-[11px] font-mono text-text-dim",
                                         children: "~/status"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/Hero.tsx",
-                                        lineNumber: 135,
+                                        lineNumber: 150,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/Hero.tsx",
-                                    lineNumber: 134,
+                                    lineNumber: 149,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "p-5 font-mono text-[12px] leading-relaxed",
+                                    className: "p-6 md:p-7 font-mono text-[13px] md:text-sm leading-relaxed",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "flex gap-2 text-text-muted",
@@ -334,7 +355,7 @@ function Hero() {
                                                     children: "❯"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/sections/Hero.tsx",
-                                                    lineNumber: 139,
+                                                    lineNumber: 154,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -342,13 +363,13 @@ function Hero() {
                                                     children: "cat current.md"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/sections/Hero.tsx",
-                                                    lineNumber: 140,
+                                                    lineNumber: 155,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/sections/Hero.tsx",
-                                            lineNumber: 138,
+                                            lineNumber: 153,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -361,14 +382,14 @@ function Hero() {
                                                             children: "→"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/sections/Hero.tsx",
-                                                            lineNumber: 143,
+                                                            lineNumber: 158,
                                                             columnNumber: 22
                                                         }, this),
                                                         " building GenAI auditing platforms"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/sections/Hero.tsx",
-                                                    lineNumber: 143,
+                                                    lineNumber: 158,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -378,14 +399,14 @@ function Hero() {
                                                             children: "→"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/sections/Hero.tsx",
-                                                            lineNumber: 144,
+                                                            lineNumber: 159,
                                                             columnNumber: 22
                                                         }, this),
                                                         " exploring distributed systems & backend architecture"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/sections/Hero.tsx",
-                                                    lineNumber: 144,
+                                                    lineNumber: 159,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -395,14 +416,14 @@ function Hero() {
                                                             children: "→"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/sections/Hero.tsx",
-                                                            lineNumber: 145,
+                                                            lineNumber: 160,
                                                             columnNumber: 22
                                                         }, this),
                                                         " working with FastAPI, LangChain, RAG pipelines"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/sections/Hero.tsx",
-                                                    lineNumber: 145,
+                                                    lineNumber: 160,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -412,61 +433,61 @@ function Hero() {
                                                             children: "→"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/sections/Hero.tsx",
-                                                            lineNumber: 146,
+                                                            lineNumber: 161,
                                                             columnNumber: 22
                                                         }, this),
                                                         " stack: Python, Node.js, React, Docker"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/sections/Hero.tsx",
-                                                    lineNumber: 146,
+                                                    lineNumber: 161,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/sections/Hero.tsx",
-                                            lineNumber: 142,
+                                            lineNumber: 157,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "mt-3 flex gap-2",
+                                            className: "mt-4 flex gap-2",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "text-accent",
                                                     children: "❯"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/sections/Hero.tsx",
-                                                    lineNumber: 149,
+                                                    lineNumber: 164,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "inline-block w-2 h-3.5 bg-accent/60 animate-pulse"
+                                                    className: "inline-block w-2.5 h-4 bg-accent/60 animate-pulse"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/sections/Hero.tsx",
-                                                    lineNumber: 150,
+                                                    lineNumber: 165,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/sections/Hero.tsx",
-                                            lineNumber: 148,
+                                            lineNumber: 163,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/sections/Hero.tsx",
-                                    lineNumber: 137,
+                                    lineNumber: 152,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/sections/Hero.tsx",
-                            lineNumber: 133,
+                            lineNumber: 148,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/sections/Hero.tsx",
-                        lineNumber: 132,
+                        lineNumber: 147,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -486,14 +507,14 @@ function Hero() {
                                         className: "w-4 h-4"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/Hero.tsx",
-                                        lineNumber: 163,
+                                        lineNumber: 178,
                                         columnNumber: 13
                                     }, this),
                                     "View Projects"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/sections/Hero.tsx",
-                                lineNumber: 158,
+                                lineNumber: 173,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -508,13 +529,13 @@ function Hero() {
                                 children: "Get in Touch"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/sections/Hero.tsx",
-                                lineNumber: 166,
+                                lineNumber: 181,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/sections/Hero.tsx",
-                        lineNumber: 157,
+                        lineNumber: 172,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -545,31 +566,23 @@ function Hero() {
                                     className: "w-4 h-4"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/Hero.tsx",
-                                    lineNumber: 185,
+                                    lineNumber: 200,
                                     columnNumber: 15
                                 }, this)
                             }, s.label, false, {
                                 fileName: "[project]/src/components/sections/Hero.tsx",
-                                lineNumber: 182,
+                                lineNumber: 197,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/sections/Hero.tsx",
-                        lineNumber: 176,
+                        lineNumber: 191,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/sections/Hero.tsx",
-                lineNumber: 102,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute bottom-10 left-0 right-0 flex items-center justify-center text-[11px] text-text-dim font-mono",
-                children: "Sathyabama Institute · B.Tech CSE"
-            }, void 0, false, {
-                fileName: "[project]/src/components/sections/Hero.tsx",
-                lineNumber: 192,
+                lineNumber: 112,
                 columnNumber: 7
             }, this)
         ]
@@ -1335,8 +1348,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-icons/fi/index.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/constants.ts [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$shared$2f$ScrollReveal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/shared/ScrollReveal.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$shared$2f$LenisProvider$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/shared/LenisProvider.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$animations$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/animations.ts [app-ssr] (ecmascript)");
 'use client';
+;
 ;
 ;
 ;
@@ -1348,18 +1363,30 @@ function Work() {
     const featured = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PROJECTS"].filter((p)=>p.featured);
     const others = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PROJECTS"].filter((p)=>!p.featured);
     const [terminalProject, setTerminalProject] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const lenis = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$shared$2f$LenisProvider$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useLenis"])();
     // Lock body scroll when modal is open
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        document.body.style.overflow = terminalProject ? 'hidden' : '';
+        if (terminalProject) {
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+            lenis?.stop();
+        } else {
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+            lenis?.start();
+        }
         return ()=>{
             document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+            lenis?.start();
         };
     }, [
-        terminalProject
+        terminalProject,
+        lenis
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "work",
-        className: "relative z-10 py-32 md:py-44",
+        className: `relative py-32 md:py-44 ${terminalProject ? 'z-[100]' : 'z-10'}`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "section-container",
@@ -1371,12 +1398,12 @@ function Work() {
                             children: "Selected Projects"
                         }, void 0, false, {
                             fileName: "[project]/src/components/sections/Work.tsx",
-                            lineNumber: 25,
+                            lineNumber: 39,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/sections/Work.tsx",
-                        lineNumber: 24,
+                        lineNumber: 38,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$shared$2f$ScrollReveal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ScrollReveal"], {
@@ -1387,12 +1414,12 @@ function Work() {
                             children: "A few things I've shipped. Each one taught me something new."
                         }, void 0, false, {
                             fileName: "[project]/src/components/sections/Work.tsx",
-                            lineNumber: 30,
+                            lineNumber: 44,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/sections/Work.tsx",
-                        lineNumber: 29,
+                        lineNumber: 43,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1403,12 +1430,12 @@ function Work() {
                                 onInspect: ()=>setTerminalProject(project)
                             }, project.title, false, {
                                 fileName: "[project]/src/components/sections/Work.tsx",
-                                lineNumber: 38,
+                                lineNumber: 52,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/sections/Work.tsx",
-                        lineNumber: 36,
+                        lineNumber: 50,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$shared$2f$ScrollReveal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ScrollReveal"], {
@@ -1419,12 +1446,12 @@ function Work() {
                             children: "Other explorations"
                         }, void 0, false, {
                             fileName: "[project]/src/components/sections/Work.tsx",
-                            lineNumber: 49,
+                            lineNumber: 63,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/sections/Work.tsx",
-                        lineNumber: 48,
+                        lineNumber: 62,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1442,23 +1469,23 @@ function Work() {
                                     project: project
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/Work.tsx",
-                                    lineNumber: 61,
+                                    lineNumber: 75,
                                     columnNumber: 15
                                 }, this)
                             }, project.title, false, {
                                 fileName: "[project]/src/components/sections/Work.tsx",
-                                lineNumber: 60,
+                                lineNumber: 74,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/sections/Work.tsx",
-                        lineNumber: 52,
+                        lineNumber: 66,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/sections/Work.tsx",
-                lineNumber: 23,
+                lineNumber: 37,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -1467,18 +1494,18 @@ function Work() {
                     onClose: ()=>setTerminalProject(null)
                 }, void 0, false, {
                     fileName: "[project]/src/components/sections/Work.tsx",
-                    lineNumber: 70,
+                    lineNumber: 84,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/Work.tsx",
-                lineNumber: 68,
+                lineNumber: 82,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/sections/Work.tsx",
-        lineNumber: 22,
+        lineNumber: 36,
         columnNumber: 5
     }, this);
 }
@@ -1506,7 +1533,7 @@ function Work() {
                     className: "absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none bg-gradient-to-br from-accent-glow via-transparent to-transparent"
                 }, void 0, false, {
                     fileName: "[project]/src/components/sections/Work.tsx",
-                    lineNumber: 99,
+                    lineNumber: 113,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1520,7 +1547,7 @@ function Work() {
                                     children: String(index + 1).padStart(2, '0')
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/Work.tsx",
-                                    lineNumber: 104,
+                                    lineNumber: 118,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1528,7 +1555,7 @@ function Work() {
                                     children: project.title
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/Work.tsx",
-                                    lineNumber: 107,
+                                    lineNumber: 121,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1536,7 +1563,7 @@ function Work() {
                                     children: project.description
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/Work.tsx",
-                                    lineNumber: 110,
+                                    lineNumber: 124,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1546,12 +1573,12 @@ function Work() {
                                             children: t
                                         }, t, false, {
                                             fileName: "[project]/src/components/sections/Work.tsx",
-                                            lineNumber: 116,
+                                            lineNumber: 130,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/Work.tsx",
-                                    lineNumber: 114,
+                                    lineNumber: 128,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1567,14 +1594,14 @@ function Work() {
                                                     className: "w-4 h-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/sections/Work.tsx",
-                                                    lineNumber: 125,
+                                                    lineNumber: 139,
                                                     columnNumber: 17
                                                 }, this),
                                                 " Source"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/sections/Work.tsx",
-                                            lineNumber: 123,
+                                            lineNumber: 137,
                                             columnNumber: 15
                                         }, this),
                                         project.live && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1587,14 +1614,14 @@ function Work() {
                                                     className: "w-4 h-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/sections/Work.tsx",
-                                                    lineNumber: 130,
+                                                    lineNumber: 144,
                                                     columnNumber: 19
                                                 }, this),
                                                 " Demo"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/sections/Work.tsx",
-                                            lineNumber: 128,
+                                            lineNumber: 142,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1603,19 +1630,19 @@ function Work() {
                                             children: "$ inspect"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/sections/Work.tsx",
-                                            lineNumber: 133,
+                                            lineNumber: 147,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/sections/Work.tsx",
-                                    lineNumber: 122,
+                                    lineNumber: 136,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/sections/Work.tsx",
-                            lineNumber: 103,
+                            lineNumber: 117,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1627,7 +1654,7 @@ function Work() {
                                     color: "var(--color-accent)"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/Work.tsx",
-                                    lineNumber: 147,
+                                    lineNumber: 161,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1635,30 +1662,30 @@ function Work() {
                                     children: "click to inspect →"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/Work.tsx",
-                                    lineNumber: 148,
+                                    lineNumber: 162,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/sections/Work.tsx",
-                            lineNumber: 143,
+                            lineNumber: 157,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/sections/Work.tsx",
-                    lineNumber: 101,
+                    lineNumber: 115,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/sections/Work.tsx",
-            lineNumber: 98,
+            lineNumber: 112,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/sections/Work.tsx",
-        lineNumber: 97,
+        lineNumber: 111,
         columnNumber: 5
     }, this);
 }
@@ -1691,7 +1718,7 @@ function Work() {
                     strokeWidth: "0.5"
                 }, r, false, {
                     fileName: "[project]/src/components/sections/Work.tsx",
-                    lineNumber: 171,
+                    lineNumber: 185,
                     columnNumber: 9
                 }, this)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].path, {
@@ -1712,7 +1739,7 @@ function Work() {
                 }
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/Work.tsx",
-                lineNumber: 173,
+                lineNumber: 187,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].path, {
@@ -1742,7 +1769,7 @@ function Work() {
                 }
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/Work.tsx",
-                lineNumber: 174,
+                lineNumber: 188,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].circle, {
@@ -1765,7 +1792,7 @@ function Work() {
                 }
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/Work.tsx",
-                lineNumber: 175,
+                lineNumber: 189,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("defs", {
@@ -1782,7 +1809,7 @@ function Work() {
                             stopOpacity: "0.12"
                         }, void 0, false, {
                             fileName: "[project]/src/components/sections/Work.tsx",
-                            lineNumber: 178,
+                            lineNumber: 192,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("stop", {
@@ -1791,24 +1818,24 @@ function Work() {
                             stopOpacity: "0"
                         }, void 0, false, {
                             fileName: "[project]/src/components/sections/Work.tsx",
-                            lineNumber: 179,
+                            lineNumber: 193,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/sections/Work.tsx",
-                    lineNumber: 177,
+                    lineNumber: 191,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/Work.tsx",
-                lineNumber: 176,
+                lineNumber: 190,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/sections/Work.tsx",
-        lineNumber: 169,
+        lineNumber: 183,
         columnNumber: 5
     }, this);
 }
@@ -1816,16 +1843,21 @@ function Work() {
    TERMINAL OVERLAY — Fullscreen modal with blur + typing
    ═══════════════════════════════════════════════════════ */ function TerminalOverlay({ project, onClose }) {
     const lines = [
-        `❯ cat ${project.title.toLowerCase().replace(/\s+/g, '-')}.md`,
+        `❯ ./inspect --project="${project.title}"`,
+        `[INFO] Locating project data... OK`,
         ``,
-        `${project.title}`,
-        `${project.subtitle}`,
+        `NAME:    ${project.title}`,
+        `TYPE:    ${project.subtitle}`,
+        `STATUS:  ${project.live ? 'Deployed (Live)' : 'Development / Repository only'}`,
+        `GITHUB:  ${project.github ? 'Available' : 'Private'}`,
         ``,
-        `Stack:`,
-        ...project.tech.map((t)=>`  → ${t}`),
+        `[INFO] Analyzing tech stack...`,
+        ...project.tech.map((t)=>`  [+] Loaded dependency: ${t}`),
         ``,
-        `${project.description}`,
+        `[INFO] Fetching core description...`,
+        ...project.description.split('. ').filter((s)=>s.trim().length > 0).map((s)=>`  > ${s.trim()}${s.trim().endsWith('.') ? '' : '.'}`),
         ``,
+        `[INFO] Project analysis complete.`,
         `❯ _`
     ];
     const [typedLines, setTypedLines] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
@@ -1901,7 +1933,7 @@ function Work() {
                 className: "absolute inset-0 bg-black/70 backdrop-blur-md"
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/Work.tsx",
-                lineNumber: 260,
+                lineNumber: 279,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1929,11 +1961,11 @@ function Work() {
                         1
                     ]
                 },
-                className: "relative w-full max-w-2xl rounded-xl border border-border bg-[#0A0A0C] overflow-hidden shadow-2xl",
+                className: "relative w-full max-w-5xl rounded-xl border border-border bg-[#0A0A0C] overflow-hidden shadow-2xl h-[75vh] md:h-[650px] flex flex-col",
                 onClick: (e)=>e.stopPropagation(),
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center justify-between px-5 py-3 border-b border-border",
+                        className: "flex items-center justify-between px-5 py-3 border-b border-border shrink-0",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "text-[11px] font-mono text-text-dim",
@@ -1943,7 +1975,7 @@ function Work() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/sections/Work.tsx",
-                                lineNumber: 273,
+                                lineNumber: 292,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1953,22 +1985,23 @@ function Work() {
                                     className: "w-4 h-4"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/Work.tsx",
-                                    lineNumber: 277,
+                                    lineNumber: 296,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/sections/Work.tsx",
-                                lineNumber: 276,
+                                lineNumber: 295,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/sections/Work.tsx",
-                        lineNumber: 272,
+                        lineNumber: 291,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "p-6 md:p-8 font-mono text-[13px] leading-[1.8] min-h-[300px] max-h-[60vh] overflow-y-auto",
+                        className: "p-6 md:p-8 font-mono text-[13px] md:text-sm leading-[1.8] flex-1 overflow-y-auto",
+                        "data-lenis-prevent": "true",
                         children: [
                             typedLines.map((line, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "min-h-[1.5rem]",
@@ -1979,7 +2012,7 @@ function Work() {
                                                 children: "❯"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/sections/Work.tsx",
-                                                lineNumber: 287,
+                                                lineNumber: 309,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1987,78 +2020,85 @@ function Work() {
                                                 children: line.slice(1)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/sections/Work.tsx",
-                                                lineNumber: 288,
+                                                lineNumber: 310,
                                                 columnNumber: 19
                                             }, this),
                                             line === '❯ _' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "inline-block w-2 h-3.5 bg-accent/60 animate-pulse ml-0.5 align-middle"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/sections/Work.tsx",
-                                                lineNumber: 290,
+                                                lineNumber: 312,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/sections/Work.tsx",
-                                        lineNumber: 286,
+                                        lineNumber: 308,
                                         columnNumber: 17
-                                    }, this) : line.startsWith('  →') ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    }, this) : line.startsWith('  [+]') ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "text-text-muted",
                                         children: line
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/Work.tsx",
-                                        lineNumber: 294,
+                                        lineNumber: 316,
                                         columnNumber: 17
-                                    }, this) : line === project.title ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    }, this) : line.startsWith('NAME:') ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "text-text font-semibold text-base",
                                         children: line
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/Work.tsx",
-                                        lineNumber: 296,
+                                        lineNumber: 318,
                                         columnNumber: 17
-                                    }, this) : line === 'Stack:' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    }, this) : line.startsWith('TYPE:') ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "text-accent/80 font-semibold",
                                         children: line
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/Work.tsx",
-                                        lineNumber: 298,
+                                        lineNumber: 320,
+                                        columnNumber: 17
+                                    }, this) : line.startsWith('[INFO]') ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-accent/50",
+                                        children: line
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/sections/Work.tsx",
+                                        lineNumber: 322,
                                         columnNumber: 17
                                     }, this) : line === '' ? null : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "text-text-dim",
                                         children: line
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/Work.tsx",
-                                        lineNumber: 300,
+                                        lineNumber: 324,
                                         columnNumber: 17
                                     }, this)
                                 }, i, false, {
                                     fileName: "[project]/src/components/sections/Work.tsx",
-                                    lineNumber: 284,
+                                    lineNumber: 306,
                                     columnNumber: 13
                                 }, this)),
                             currentLine < lines.length && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "inline-block w-2 h-3.5 bg-accent/60 animate-pulse"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/sections/Work.tsx",
-                                lineNumber: 305,
+                                lineNumber: 329,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/sections/Work.tsx",
-                        lineNumber: 282,
+                        lineNumber: 301,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/sections/Work.tsx",
-                lineNumber: 263,
+                lineNumber: 282,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/sections/Work.tsx",
-        lineNumber: 251,
+        lineNumber: 270,
         columnNumber: 5
     }, this);
 }
@@ -2079,20 +2119,20 @@ function Work() {
                         children: project.title
                     }, void 0, false, {
                         fileName: "[project]/src/components/sections/Work.tsx",
-                        lineNumber: 321,
+                        lineNumber: 345,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FiArrowUpRight"], {
                         className: "w-4 h-4 text-text-dim group-hover:text-accent transition-all flex-shrink-0 mt-0.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                     }, void 0, false, {
                         fileName: "[project]/src/components/sections/Work.tsx",
-                        lineNumber: 322,
+                        lineNumber: 346,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/sections/Work.tsx",
-                lineNumber: 320,
+                lineNumber: 344,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2100,7 +2140,7 @@ function Work() {
                 children: project.description
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/Work.tsx",
-                lineNumber: 324,
+                lineNumber: 348,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2111,7 +2151,7 @@ function Work() {
                             children: t
                         }, t, false, {
                             fileName: "[project]/src/components/sections/Work.tsx",
-                            lineNumber: 327,
+                            lineNumber: 351,
                             columnNumber: 11
                         }, this)),
                     project.tech.length > 4 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2122,19 +2162,19 @@ function Work() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/sections/Work.tsx",
-                        lineNumber: 330,
+                        lineNumber: 354,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/sections/Work.tsx",
-                lineNumber: 325,
+                lineNumber: 349,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/sections/Work.tsx",
-        lineNumber: 318,
+        lineNumber: 342,
         columnNumber: 5
     }, this);
 }
