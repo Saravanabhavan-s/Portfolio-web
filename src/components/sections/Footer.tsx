@@ -1,0 +1,28 @@
+'use client';
+
+import { SITE } from '@/lib/constants';
+import { ScrollReveal } from '@/components/shared/ScrollReveal';
+
+export function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <footer className="relative z-10 border-t border-border">
+      <ScrollReveal variant="fade-up">
+        <div className="section-container py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-text-dim font-mono">
+            Built with obsession. &copy; {new Date().getFullYear()} {SITE.name}
+          </p>
+          <button
+            onClick={scrollToTop}
+            className="text-sm text-text-dim font-mono hover:text-accent transition-colors link-draw"
+          >
+            Back to top ↑
+          </button>
+        </div>
+      </ScrollReveal>
+    </footer>
+  );
+}

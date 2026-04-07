@@ -1,0 +1,13 @@
+1:"$Sreact.fragment"
+2:I[77258,["/_next/static/chunks/0hd-z-32..3h4.js","/_next/static/chunks/0p908u5d_go5h.js","/_next/static/chunks/0dbhjjzl8qfwv.js","/_next/static/chunks/0jdoh-lemk44w.js"],"Hero"]
+3:I[45524,["/_next/static/chunks/0hd-z-32..3h4.js","/_next/static/chunks/0p908u5d_go5h.js","/_next/static/chunks/0dbhjjzl8qfwv.js","/_next/static/chunks/0jdoh-lemk44w.js"],"SectionDivider"]
+4:I[95116,["/_next/static/chunks/0hd-z-32..3h4.js","/_next/static/chunks/0p908u5d_go5h.js","/_next/static/chunks/0dbhjjzl8qfwv.js","/_next/static/chunks/0jdoh-lemk44w.js"],"About"]
+5:I[10403,["/_next/static/chunks/0hd-z-32..3h4.js","/_next/static/chunks/0p908u5d_go5h.js","/_next/static/chunks/0dbhjjzl8qfwv.js","/_next/static/chunks/0jdoh-lemk44w.js"],"Work"]
+6:I[69343,["/_next/static/chunks/0hd-z-32..3h4.js","/_next/static/chunks/0p908u5d_go5h.js","/_next/static/chunks/0dbhjjzl8qfwv.js","/_next/static/chunks/0jdoh-lemk44w.js"],"Technologies"]
+7:I[34506,["/_next/static/chunks/0hd-z-32..3h4.js","/_next/static/chunks/0p908u5d_go5h.js","/_next/static/chunks/0dbhjjzl8qfwv.js","/_next/static/chunks/0jdoh-lemk44w.js"],"Experience"]
+8:I[47710,["/_next/static/chunks/0hd-z-32..3h4.js","/_next/static/chunks/0p908u5d_go5h.js","/_next/static/chunks/0dbhjjzl8qfwv.js","/_next/static/chunks/0jdoh-lemk44w.js"],"Contact"]
+9:I[81469,["/_next/static/chunks/0hd-z-32..3h4.js","/_next/static/chunks/0p908u5d_go5h.js","/_next/static/chunks/0dbhjjzl8qfwv.js","/_next/static/chunks/0jdoh-lemk44w.js"],"Footer"]
+a:I[97367,["/_next/static/chunks/0hd-z-32..3h4.js","/_next/static/chunks/0p908u5d_go5h.js","/_next/static/chunks/0dbhjjzl8qfwv.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"children":[["$","$L2",null,{}],["$","$L3",null,{}],["$","$L4",null,{}],["$","$L3",null,{}],["$","$L5",null,{}],["$","$L3",null,{}],["$","$L6",null,{}],["$","$L3",null,{}],["$","$L7",null,{}],["$","$L3",null,{}],["$","$L8",null,{}],["$","$L9",null,{}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/0jdoh-lemk44w.js","async":true}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"evxWhTYbtegHD9BpF1kyg"}
+c:null
