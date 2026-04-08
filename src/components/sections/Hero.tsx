@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { gsap } from 'gsap';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import { FaXTwitter, FaLinkedinIn } from 'react-icons/fa6';
@@ -17,15 +16,12 @@ export function Hero() {
   const [displayText, setDisplayText] = useState('');
   const [titleIdx, setTitleIdx] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [greeting, setGreeting] = useState('Hello');
-
-  // Time-based greeting
-  useEffect(() => {
+  const [greeting] = useState(() => {
     const h = new Date().getHours();
-    if (h < 12) setGreeting('Good morning');
-    else if (h < 17) setGreeting('Good afternoon');
-    else setGreeting('Good evening');
-  }, []);
+    if (h < 12) return 'Good morning';
+    if (h < 17) return 'Good afternoon';
+    return 'Good evening';
+  });
 
   // Typing effect
   useEffect(() => {
@@ -34,8 +30,10 @@ export function Hero() {
     if (!isDeleting && displayText === current) {
       timeout = setTimeout(() => setIsDeleting(true), 2200);
     } else if (isDeleting && displayText === '') {
-      setIsDeleting(false);
-      setTitleIdx((p) => (p + 1) % TITLES.length);
+      timeout = setTimeout(() => {
+        setIsDeleting(false);
+        setTitleIdx((p) => (p + 1) % TITLES.length);
+      }, 180);
     } else {
       timeout = setTimeout(
         () => setDisplayText(isDeleting ? current.substring(0, displayText.length - 1) : current.substring(0, displayText.length + 1)),
@@ -109,7 +107,7 @@ export function Hero() {
         }}
       />
 
-      <div className="section-container relative z-10 text-center max-w-3xl mx-auto flex flex-col items-center">
+      <div className="section-container relative z-10 text-center max-w-3xl mx-auto flex flex-col items-center pb-12 md:pb-16">
         {/* Availability tag */}
         <div className="hero-tag opacity-0 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border mb-8 md:mb-9 text-[13px] text-text-muted">
           <span className="w-1.5 h-1.5 rounded-full bg-green animate-pulse" />
@@ -133,73 +131,77 @@ export function Hero() {
           <span className="inline-block w-0.5 h-[1.2em] bg-accent ml-1 animate-pulse align-middle" />
         </div>
 
-        {/* Education */}
-        <p className="hero-education opacity-0 text-sm sm:text-base text-text-muted font-mono tracking-wide mb-8">
-          Sathyabama Institute of Science and Technology · B.E CSE
-        </p>
-
         {/* Description */}
-        <p className="hero-desc opacity-0 text-[15px] md:text-base text-text-muted max-w-xl mx-auto mb-11 md:mb-12 leading-8">
+        <p className="hero-desc opacity-0 text-[15px] md:text-base text-text-muted max-w-xl mx-auto leading-8">
           I architect scalable backend systems, build GenAI applications, and ship products that matter.
         </p>
 
-        {/* Status terminal card */}
-        <div className="hero-terminal relative z-20 opacity-0 w-full max-w-2xl mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-          <div className="rounded-2xl border border-border bg-[#0C0C0E]/95 shadow-[0_24px_80px_rgba(0,0,0,0.35)] overflow-hidden text-left backdrop-blur-md">
-            <div className="px-5 py-3 border-b border-border flex items-center">
-              <span className="text-[11px] font-mono text-text-dim">~/status</span>
-            </div>
-            <div className="p-6 md:p-7 font-mono text-[13px] md:text-sm leading-relaxed">
-              <div className="flex gap-2 text-text-muted">
-                <span className="text-accent">❯</span>
-                <span className="text-text font-medium">cat current.md</span>
+        {/* Lower hero block */}
+        <div className="w-full max-w-2xl mt-10 sm:mt-12 md:mt-14 flex flex-col pb-10 md:pb-12">
+          {/* Status terminal card */}
+          <div className="hero-terminal relative opacity-0 w-full">
+            <div className="rounded-2xl border border-border bg-[#0C0C0E]/95 shadow-[0_14px_36px_rgba(0,0,0,0.3)] overflow-hidden text-left backdrop-blur-md">
+              <div className="px-5 py-3 border-b border-border flex items-center">
+                <span className="text-[11px] font-mono text-text-dim">~/status</span>
               </div>
-              <div className="mt-3 space-y-1.5 pl-4 text-text-muted">
-                <div><span className="text-text-dim">→</span> building GenAI auditing platforms</div>
-                <div><span className="text-text-dim">→</span> exploring distributed systems & backend architecture</div>
-                <div><span className="text-text-dim">→</span> working with FastAPI, LangChain, RAG pipelines</div>
-                <div><span className="text-text-dim">→</span> stack: Python, Node.js, React, Docker</div>
-              </div>
-              <div className="mt-4 flex gap-2">
-                <span className="text-accent">❯</span>
-                <span className="inline-block w-2.5 h-4 bg-accent/60 animate-pulse" />
+              <div className="p-6 md:p-7 font-mono text-[13px] md:text-sm leading-relaxed">
+                <div className="flex gap-2 text-text-muted">
+                  <span className="text-accent">❯</span>
+                  <span className="text-text font-medium">cat current.md</span>
+                </div>
+                <div className="mt-3 space-y-1.5 pl-4 text-text-muted">
+                  <div><span className="text-text-dim">→</span> building GenAI auditing platforms</div>
+                  <div><span className="text-text-dim">→</span> exploring distributed systems & backend architecture</div>
+                  <div><span className="text-text-dim">→</span> working with FastAPI, LangChain, RAG pipelines</div>
+                  <div><span className="text-text-dim">→</span> stack: Python, Node.js, React, Docker</div>
+                </div>
+                <div className="mt-4 flex gap-2">
+                  <span className="text-accent">❯</span>
+                  <span className="inline-block w-2.5 h-4 bg-accent/60 animate-pulse" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* CTA buttons */}
-        <div className="hero-btns opacity-0 mt-2 md:mt-3 w-full flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-9 md:mb-10">
-          <a
-            href="#work"
-            onClick={(e) => { e.preventDefault(); document.querySelector('#work')?.scrollIntoView({ behavior: 'smooth' }); }}
-            className="w-full max-w-[320px] sm:w-auto sm:max-w-none px-7 sm:px-10 lg:px-11 py-3 sm:py-4 rounded-xl bg-accent/15 border border-accent/25 text-accent font-semibold text-sm hover:bg-accent/25 transition-all inline-flex items-center justify-center gap-2.5 sm:gap-3"
-          >
-            <FiExternalLink className="w-4 h-4" />
-            View Projects
-          </a>
-          <a
-            href="#contact"
-            onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}
-            className="w-full max-w-[320px] sm:w-auto sm:max-w-none px-7 sm:px-10 lg:px-11 py-3 sm:py-4 rounded-xl border border-border text-text-muted hover:text-text hover:border-border-hover font-semibold text-sm transition-all inline-flex items-center justify-center"
-          >
-            Get in Touch
-          </a>
-        </div>
-
-        {/* Social links */}
-        <div className="hero-socials opacity-0 flex items-center justify-center gap-3">
-          {[
-            { icon: FiGithub, href: LINKS.githubProfile, label: 'GitHub' },
-            { icon: FaXTwitter, href: LINKS.x, label: 'X' },
-            { icon: FaLinkedinIn, href: LINKS.linkedin, label: 'LinkedIn' },
-          ].map((s) => (
-            <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}
-              className="w-10 h-10 rounded-lg border border-border flex items-center justify-center text-text-dim hover:text-accent hover:border-border-hover transition-all duration-300"
+          {/* CTA row */}
+          <div className="hero-btns opacity-0 mt-10 sm:mt-12 w-full flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="#work"
+              onClick={(e) => { e.preventDefault(); document.querySelector('#work')?.scrollIntoView({ behavior: 'smooth' }); }}
+              className="h-11 w-full max-w-[340px] sm:w-auto sm:max-w-none px-9 sm:px-10 rounded-xl text-accent font-semibold text-sm sm:text-[15px] hover:text-accent-bright transition-colors inline-flex items-center justify-center gap-2.5 sm:gap-3"
             >
-              <s.icon className="w-4 h-4" />
+              <FiExternalLink className="w-4 h-4" />
+              View Work
             </a>
-          ))}
+            <a
+              href="#contact"
+              onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}
+              className="h-11 w-full max-w-[320px] sm:w-auto sm:max-w-none px-8 sm:px-9 rounded-xl text-text-muted hover:text-text font-semibold text-sm transition-colors inline-flex items-center justify-center"
+            >
+              Get in Touch
+            </a>
+          </div>
+
+          {/* Social + footer row */}
+          <div className="hero-socials opacity-0 mt-8 w-full flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            <div className="flex items-center gap-3 shrink-0">
+              {[
+                { icon: FiGithub, href: LINKS.githubProfile, label: 'GitHub' },
+                { icon: FaXTwitter, href: LINKS.x, label: 'X' },
+                { icon: FaLinkedinIn, href: LINKS.linkedin, label: 'LinkedIn' },
+              ].map((s) => (
+                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}
+                  className="w-10 h-10 rounded-lg border border-border flex items-center justify-center text-text-dim hover:text-accent hover:border-border-hover transition-all duration-300"
+                >
+                  <s.icon className="w-4 h-4" />
+                </a>
+              ))}
+            </div>
+
+            <p className="hero-education basis-full sm:basis-auto min-w-0 text-xs sm:text-sm text-text-muted font-mono tracking-wide leading-relaxed sm:leading-6 text-center sm:text-left">
+              Sathyabama Institute of Science and Technology · B.E CSE
+            </p>
+          </div>
         </div>
       </div>
 
