@@ -36,13 +36,19 @@ export function Experience() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="experience" className="relative z-10 py-32 md:py-44">
+    <section ref={sectionRef} id="experience" className="relative z-10 section-shell">
       <div className="section-container">
-        <TextMaskReveal className="mb-6">
+        {/* Terminal-style header */}
+        <ScrollReveal variant="fade-up" className="mb-4">
+          <span className="text-[11px] font-mono text-text-dim">~/experience</span>
+        </ScrollReveal>
+        <TextMaskReveal className="mb-8 md:mb-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-text leading-tight">Experience</h2>
         </TextMaskReveal>
-        <ScrollReveal variant="fade-up" className="mb-20 md:mb-28">
-          <p className="text-text-muted max-w-lg">Where I&apos;ve been and what I&apos;ve learned along the way.</p>
+        <ScrollReveal variant="fade-up" className="mb-10 md:mb-12">
+          <p className="text-text-muted max-w-2xl leading-8 font-mono text-sm">
+            <span className="text-accent">❯</span> Where I&apos;ve been and what I&apos;ve learned along the way.
+          </p>
         </ScrollReveal>
 
         <div className="relative max-w-3xl mx-auto">
@@ -50,7 +56,7 @@ export function Experience() {
             <line ref={lineRef} x1="0" y1="0" x2="0" y2="100%" stroke="#C8A2F8" strokeWidth="1" />
           </svg>
 
-          <div className="flex flex-col gap-12 md:gap-16">
+          <div className="flex flex-col gap-6 md:gap-8">
             {EXPERIENCES.map((exp, i) => (
               <ScrollReveal key={exp.role} variant="fade-up" delay={i * 0.06}>
                 <div className="relative pl-10 md:pl-16">
@@ -59,24 +65,30 @@ export function Experience() {
                     style={exp.current ? { animation: 'pulse-glow 3s infinite' } : {}}
                   />
 
-                  <div className="rounded-xl border border-border bg-bg-card p-6 md:p-8 hover:border-border-hover transition-all duration-300">
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                      <h3 className="text-base font-semibold text-text">{exp.role}</h3>
-                      <span className="text-[11px] font-mono text-accent bg-accent-dim px-2.5 py-1 rounded-md whitespace-nowrap">{exp.period}</span>
+                  {/* Terminal-style experience card */}
+                  <div className="rounded-xl border border-border bg-[#0C0C0E] overflow-hidden hover:border-border-hover transition-all duration-300">
+                    {/* Card header bar */}
+                    <div className="px-5 py-2.5 border-b border-border flex items-center justify-between">
+                      <span className="text-[10px] font-mono text-text-dim">{exp.company.toLowerCase().replace(/\s+/g, '-')}</span>
+                      <span className="text-[10px] font-mono text-accent bg-accent-dim px-2.5 py-0.5 rounded">{exp.period}</span>
                     </div>
-                    <p className="text-sm text-accent/70 mb-3">{exp.company}</p>
-                    <p className="text-sm text-text-muted leading-relaxed mb-4">{exp.description}</p>
-                    <ul className="space-y-1.5 mb-4">
-                      {exp.highlights.map((h) => (
-                        <li key={h} className="text-sm text-text-muted flex gap-2">
-                          <span className="text-accent/50 mt-0.5 shrink-0">—</span>{h}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="flex flex-wrap gap-1.5">
-                      {exp.tech.map((t) => (
-                        <span key={t} className="px-2 py-0.5 text-[10px] font-mono text-text-dim rounded bg-surface border border-border/50">{t}</span>
-                      ))}
+
+                    <div className="p-5 md:p-6 lg:p-7">
+                      <h3 className="text-base font-semibold text-text mb-2">{exp.role}</h3>
+                      <p className="text-sm text-accent/70 mb-4 font-mono">{exp.company}</p>
+                      <p className="text-sm text-text-muted leading-relaxed mb-5">{exp.description}</p>
+                      <ul className="space-y-2 mb-5">
+                        {exp.highlights.map((h) => (
+                          <li key={h} className="text-sm text-text-muted flex gap-2 font-mono">
+                            <span className="text-accent/50 mt-0.5 shrink-0">→</span>{h}
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="flex flex-wrap gap-2">
+                        {exp.tech.map((t) => (
+                          <span key={t} className="px-3 py-1 text-[10px] font-mono text-text-dim rounded bg-surface border border-border/50">{t}</span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>

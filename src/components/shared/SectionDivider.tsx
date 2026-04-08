@@ -6,7 +6,7 @@ export function SectionDivider() {
   const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });
 
   return (
-    <div ref={ref} className="section-container py-12 md:py-16">
+    <div ref={ref} className="section-container py-6 md:py-8">
       <div
         className="h-px bg-border origin-left"
         style={{

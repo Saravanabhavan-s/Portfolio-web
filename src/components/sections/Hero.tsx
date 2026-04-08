@@ -83,7 +83,7 @@ export function Hero() {
     <section
       ref={heroRef}
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-32 md:pt-40 md:pb-40"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-24 md:pt-32 md:pb-28 lg:pt-36 lg:pb-32"
     >
       {/* Grid background */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]"
@@ -109,9 +109,9 @@ export function Hero() {
         }}
       />
 
-      <div className="section-container relative z-10 text-center max-w-3xl flex flex-col items-center">
+      <div className="section-container relative z-10 text-center max-w-3xl mx-auto flex flex-col items-center">
         {/* Availability tag */}
-        <div className="hero-tag opacity-0 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border mb-8 text-[13px] text-text-muted">
+        <div className="hero-tag opacity-0 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border mb-8 md:mb-9 text-[13px] text-text-muted">
           <span className="w-1.5 h-1.5 rounded-full bg-green animate-pulse" />
           {SITE.tagline}
         </div>
@@ -122,13 +122,13 @@ export function Hero() {
         </p>
 
         {/* Name */}
-        <h1 className="hero-name opacity-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-5">
+        <h1 className="hero-name opacity-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-5 md:mb-6">
           I&apos;m{' '}
           <span className="gradient-text-accent">{SITE.name}</span>
         </h1>
 
         {/* Typed title */}
-        <div className="hero-typed opacity-0 text-xl sm:text-2xl md:text-3xl font-semibold text-accent-bright mb-6 min-h-[2.5rem]">
+        <div className="hero-typed opacity-0 text-xl sm:text-2xl md:text-3xl font-semibold text-accent-bright mb-7 md:mb-8 min-h-[2.5rem]">
           <span>{displayText}</span>
           <span className="inline-block w-0.5 h-[1.2em] bg-accent ml-1 animate-pulse align-middle" />
         </div>
@@ -139,12 +139,12 @@ export function Hero() {
         </p>
 
         {/* Description */}
-        <p className="hero-desc opacity-0 text-[15px] md:text-base text-text-muted max-w-xl mx-auto mb-10 leading-relaxed">
+        <p className="hero-desc opacity-0 text-[15px] md:text-base text-text-muted max-w-xl mx-auto mb-11 md:mb-12 leading-8">
           I architect scalable backend systems, build GenAI applications, and ship products that matter.
         </p>
 
         {/* Status terminal card */}
-        <div className="hero-terminal relative z-20 opacity-0 w-full max-w-2xl mb-12">
+        <div className="hero-terminal relative z-20 opacity-0 w-full max-w-2xl mb-10 md:mb-11">
           <div className="rounded-2xl border border-border bg-[#0C0C0E]/95 shadow-[0_24px_80px_rgba(0,0,0,0.35)] overflow-hidden text-left backdrop-blur-md">
             <div className="px-5 py-3 border-b border-border flex items-center">
               <span className="text-[11px] font-mono text-text-dim">~/status</span>
@@ -169,7 +169,7 @@ export function Hero() {
         </div>
 
         {/* CTA buttons */}
-        <div className="hero-btns opacity-0 flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+        <div className="hero-btns opacity-0 flex flex-col sm:flex-row items-center justify-center gap-4 mb-9 md:mb-10">
           <a
             href="#work"
             onClick={(e) => { e.preventDefault(); document.querySelector('#work')?.scrollIntoView({ behavior: 'smooth' }); }}
