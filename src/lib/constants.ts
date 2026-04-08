@@ -20,7 +20,7 @@ export const SITE = {
   initials: 'SB',
   title: 'Saravanabhavan S — Backend & AI Developer',
   description: 'Backend-focused developer building scalable systems, GenAI applications, and cloud-based products.',
-  roles: ['Backend Developer', 'AI Developer', 'Full Stack Developer'] as const,
+  roles: ['Backend Developer', 'AI Developer', 'System Architect'] as const,
   tagline: 'Available for opportunities',
 } as const;
 
@@ -128,6 +128,21 @@ export interface Experience {
   current: boolean;
 }
 
+export interface Certification {
+  title: string;
+  issuer: string;
+  year: string;
+  credentialId?: string;
+  link?: string;
+}
+
+export interface Achievement {
+  title: string;
+  details: string;
+  period?: string;
+  link?: string;
+}
+
 export const EXPERIENCES: Experience[] = [
   {
     role: 'Infosys Springboard Internship 6.0',
@@ -179,6 +194,52 @@ export const EXPERIENCES: Experience[] = [
     ],
     tech: ['Robotics', 'IoT', 'Embedded Systems'],
     current: true,
+  },
+];
+
+export const CERTIFICATIONS: Certification[] = [
+  {
+    title: 'OCI 2025 Certified Generative AI Professional',
+    issuer: 'Oracle',
+    year: 'Feb 2026',
+  },
+  {
+    title: 'OCI 2025 Certified AI Foundations Associate',
+    issuer: 'Oracle',
+    year: 'Mar 2026',
+  },
+  {
+    title: 'Introduction to Cybersecurity',
+    issuer: 'Cisco',
+    year: '2025',
+  },
+  {
+    title: 'Responsive Website, Static Website, Databases, Python Foundations',
+    issuer: 'NXTWAVE',
+    year: '2024-2025',
+  },
+  {
+    title: 'Essentials Pathway',
+    issuer: 'Unity',
+    year: '2024-2025',
+  },
+];
+
+export const ACHIEVEMENTS: Achievement[] = [
+  {
+    title: 'IEEE Robotics & Automation Society',
+    details: 'Active member and co-organizer of 5+ technical events, workshops, and student engagement activities.',
+    period: '2023 - Present',
+  },
+  {
+    title: 'Class Ambassador',
+    details: 'Represented students, bridged faculty-student communication, and coordinated class academic activities and events.',
+    period: '2023 - Present',
+  },
+  {
+    title: 'Malaysia Bootcamp (USIM)',
+    details: 'Completed an international IoT, AI, and Robotics bootcamp with 6 modules and a capstone project in a cross-cultural team.',
+    period: '2024',
   },
 ];
 

@@ -5,10 +5,12 @@ import { ScrollReveal, TextMaskReveal } from '@/components/shared/ScrollReveal';
 
 export function About() {
   const profilePreview = {
-    role: ABOUT.terminal.content.role,
-    focus: ['Backend systems', 'AI workflows', 'Product engineering'],
-    location: ABOUT.terminal.content.location,
-    style: 'Calm, practical, minimal',
+    role: 'Backend + AI Developer',
+    stack: 'FastAPI, Node.js, MongoDB',
+    ai: 'RAG and LLM evaluation',
+    building: 'Production APIs and AI workflows',
+    location: 'India',
+    style: 'Practical and execution-focused',
   };
 
   const previewEntries = Object.entries(profilePreview);
@@ -30,21 +32,27 @@ export function About() {
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_460px] gap-8 lg:gap-12 items-start">
           <div className="border-t border-border pt-6 md:pt-7">
             <ScrollReveal variant="fade-up">
               <p className="text-[15px] md:text-base text-text-muted leading-8 max-w-2xl">
-                I care about clear architecture, maintainable APIs, and AI features that solve practical problems.
+                I build backend systems that are stable in production, easy to maintain, and useful for real users.
               </p>
             </ScrollReveal>
 
             <ScrollReveal variant="fade-up" delay={0.08}>
               <p className="text-[15px] md:text-base text-text-muted leading-8 max-w-2xl mt-4 md:mt-5">
-                My approach is simple: understand the problem, design cleanly, ship reliably.
+                My recent work focuses on APIs, auth flows, data handling, and GenAI features like RAG and evaluation.
               </p>
             </ScrollReveal>
 
             <ScrollReveal variant="fade-up" delay={0.16}>
+              <p className="text-[15px] md:text-base text-text-muted leading-8 max-w-2xl mt-4 md:mt-5">
+                I enjoy turning complex requirements into clear architecture and shipping end-to-end features quickly.
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal variant="fade-up" delay={0.24}>
               <p className="text-[12px] font-mono text-text-dim mt-6 md:mt-7">
                 {ABOUT.terminal.fileName} is a short snapshot, not a full autobiography.
               </p>
@@ -58,8 +66,8 @@ export function About() {
                 <span className="text-[10px] font-mono text-text-dim">read only</span>
               </div>
 
-              <div className="px-4 py-4 overflow-auto">
-                <pre className="text-[12px] leading-6 font-mono text-text-muted">
+              <div className="px-4 py-4">
+                <pre className="text-[11px] leading-6 font-mono text-text-muted whitespace-pre">
                   <code>
                     <span className="text-text-dim">{'{'}</span>
                     {'\n'}

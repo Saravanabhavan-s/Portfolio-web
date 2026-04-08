@@ -6,7 +6,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Saravanabhavan S — Backend & AI Developer',
   description:
-    'Portfolio of Saravanabhavan S — Backend Developer, AI Developer, and Full Stack Developer building scalable systems and GenAI applications.',
+    'Portfolio of Saravanabhavan S — Backend Developer, AI Developer, and System Architect building scalable systems and GenAI applications.',
   authors: [{ name: 'Saravanabhavan S' }],
   openGraph: {
     type: 'website',

@@ -4,7 +4,7 @@ import { FiGithub, FiExternalLink, FiDownload } from 'react-icons/fi'
 import { FaXTwitter, FaLinkedinIn } from 'react-icons/fa6'
 import { LINKS } from '../config/links'
 
-const TITLES = ['Backend Developer', 'AI Developer', 'Full Stack Developer']
+const TITLES = ['Backend Developer', 'AI Developer', 'System Architect']
 
 export default function Hero() {
   const heroRef = useRef(null)

@@ -8,7 +8,7 @@ import { FaXTwitter, FaLinkedinIn } from 'react-icons/fa6';
 import { SITE, LINKS } from '@/lib/constants';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 
-const TITLES = ['Backend Developer', 'AI Developer', 'Full Stack Developer'];
+const TITLES = ['Backend Developer', 'AI Developer', 'System Architect'];
 
 export function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -144,7 +144,7 @@ export function Hero() {
         </p>
 
         {/* Status terminal card */}
-        <div className="hero-terminal relative z-20 opacity-0 w-full max-w-2xl mb-10 md:mb-11">
+        <div className="hero-terminal relative z-20 opacity-0 w-full max-w-2xl mb-12 sm:mb-16 md:mb-20 lg:mb-24">
           <div className="rounded-2xl border border-border bg-[#0C0C0E]/95 shadow-[0_24px_80px_rgba(0,0,0,0.35)] overflow-hidden text-left backdrop-blur-md">
             <div className="px-5 py-3 border-b border-border flex items-center">
               <span className="text-[11px] font-mono text-text-dim">~/status</span>
@@ -169,11 +169,11 @@ export function Hero() {
         </div>
 
         {/* CTA buttons */}
-        <div className="hero-btns opacity-0 flex flex-col sm:flex-row items-center justify-center gap-4 mb-9 md:mb-10">
+        <div className="hero-btns opacity-0 mt-2 md:mt-3 w-full flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-9 md:mb-10">
           <a
             href="#work"
             onClick={(e) => { e.preventDefault(); document.querySelector('#work')?.scrollIntoView({ behavior: 'smooth' }); }}
-            className="px-7 py-3 rounded-xl bg-accent/15 border border-accent/25 text-accent font-semibold text-sm hover:bg-accent/25 transition-all flex items-center gap-2"
+            className="w-full max-w-[320px] sm:w-auto sm:max-w-none px-7 sm:px-10 lg:px-11 py-3 sm:py-4 rounded-xl bg-accent/15 border border-accent/25 text-accent font-semibold text-sm hover:bg-accent/25 transition-all inline-flex items-center justify-center gap-2.5 sm:gap-3"
           >
             <FiExternalLink className="w-4 h-4" />
             View Projects
@@ -181,7 +181,7 @@ export function Hero() {
           <a
             href="#contact"
             onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}
-            className="px-7 py-3 rounded-xl border border-border text-text-muted hover:text-text hover:border-border-hover font-semibold text-sm transition-all"
+            className="w-full max-w-[320px] sm:w-auto sm:max-w-none px-7 sm:px-10 lg:px-11 py-3 sm:py-4 rounded-xl border border-border text-text-muted hover:text-text hover:border-border-hover font-semibold text-sm transition-all inline-flex items-center justify-center"
           >
             Get in Touch
           </a>
