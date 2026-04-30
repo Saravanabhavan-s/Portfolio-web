@@ -227,6 +227,11 @@ export const CERTIFICATIONS: Certification[] = [
 
 export const ACHIEVEMENTS: Achievement[] = [
   {
+    title: 'Sathyabama Luminary Award 2026',
+    details: 'Recognized for all-round excellence in academics, technical skills, leadership, and contributions to the student community.',
+    period: '2026',
+  },
+  {
     title: 'IEEE Robotics & Automation Society',
     details: 'Active member and co-organizer of 5+ technical events, workshops, and student engagement activities.',
     period: '2023 - Present',
