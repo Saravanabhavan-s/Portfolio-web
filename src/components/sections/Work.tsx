@@ -182,12 +182,24 @@ function FeaturedProject({
             </div>
           </div>
 
-          <button
-            type="button"
+          <div
+            role="button"
             onClick={onInspect}
             className="group/anim relative flex h-full min-h-[260px] flex-col justify-between text-left transition-colors hover:bg-surface/35 cursor-pointer"
             aria-label={`Inspect ${project.title}`}
           >
+            {project.live && (
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="absolute top-3 right-3 z-10 inline-flex items-center justify-center w-9 h-9 rounded-full bg-black/40 text-text-muted opacity-0 transition-opacity duration-200 group-hover:opacity-100 hover:bg-black/60"
+                title="View demo"
+              >
+                <FiExternalLink className="w-4 h-4" />
+              </a>
+            )}
             {project.animationId ? (
               <ProjectAnimation animationId={project.animationId} />
             ) : (
@@ -211,7 +223,7 @@ function FeaturedProject({
                 </div>
               </>
             )}
-          </button>
+          </div>
         </div>
       </article>
     </ScrollReveal>
