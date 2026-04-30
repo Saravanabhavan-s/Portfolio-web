@@ -59,6 +59,7 @@ export interface Project {
   github: string;
   live: string | null;
   featured: boolean;
+  animationId?: string;
 }
 
 export const PROJECTS: Project[] = [
@@ -70,15 +71,17 @@ export const PROJECTS: Project[] = [
     github: LINKS.summarizerRepo,
     live: null,
     featured: true,
+    animationId: 'echoscore',
   },
   {
-    title: 'Weather Song Recommender',
-    subtitle: 'Environment-aware Music Discovery',
-    description: 'Flask-based web application that dynamically recommends songs based on live weather conditions using the OpenWeather API and YouTube integration.',
-    tech: ['Flask', 'OpenWeather API', 'YouTube API', 'JavaScript'],
+    title: 'Vibecast',
+    subtitle: 'Context-Aware Music Recommendation Platform',
+    description: 'Full-stack weather-aware music platform with FastAPI backend, React frontend, and MongoDB. Recommends songs via a multi-factor scoring engine using weather, mood, time, temperature, and user preferences.',
+    tech: ['FastAPI', 'React', 'MongoDB', 'OpenWeather API', 'JWT', 'Tailwind CSS'],
     github: LINKS.weatherSongRepo,
     live: null,
     featured: true,
+    animationId: 'vibecast',
   },
   {
     title: 'Cyber Shield Network Security',

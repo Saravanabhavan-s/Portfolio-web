@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiGithub, FiExternalLink, FiArrowUpRight, FiX } from 'react-icons/fi';
 import { PROJECTS, type Project } from '@/lib/constants';
+import { ProjectAnimation } from '@/components/shared/ProjectAnimation';
 import { ScrollReveal, TextMaskReveal } from '@/components/shared/ScrollReveal';
 import { useLenis } from '@/components/shared/LenisProvider';
 import { staggerContainer, fadeUp } from '@/lib/animations';
@@ -184,26 +185,32 @@ function FeaturedProject({
           <button
             type="button"
             onClick={onInspect}
-            className="relative flex h-full min-h-[260px] flex-col justify-between p-5 md:p-6 text-left transition-colors hover:bg-surface/35"
+            className="group/anim relative flex h-full min-h-[260px] flex-col justify-between text-left transition-colors hover:bg-surface/35 cursor-pointer"
             aria-label={`Inspect ${project.title}`}
           >
-            <div className="flex items-center justify-between">
-              <span className="text-[10px] font-mono text-text-dim">performance.signal</span>
-              <span className="text-[10px] font-mono text-accent/70">click to inspect</span>
-            </div>
-            <div className="rounded-lg border border-border bg-[#0A0A0C] p-4 mt-5 mb-5">
-              <SparklineGraph data={sparkData} color="var(--color-accent)" />
-            </div>
-            <div className="grid grid-cols-3 gap-2">
-              {['build', 'scale', 'impact'].map((metric, metricIndex) => (
-                <div key={metric} className="rounded-md border border-border bg-surface/40 px-2.5 py-2">
-                  <div className="text-[9px] font-mono uppercase tracking-[0.08em] text-text-dim">{metric}</div>
-                  <div className="mt-1 text-xs font-mono text-text">
-                    {String(72 + ((index + 1) * 7 + metricIndex * 5) % 24).padStart(2, '0')}%
-                  </div>
+            {project.animationId ? (
+              <ProjectAnimation animationId={project.animationId} />
+            ) : (
+              <>
+                <div className="flex items-center justify-between p-5 md:p-6">
+                  <span className="text-[10px] font-mono text-text-dim">performance.signal</span>
+                  <span className="text-[10px] font-mono text-accent/70">click to inspect</span>
                 </div>
-              ))}
-            </div>
+                <div className="rounded-lg border border-border bg-[#0A0A0C] p-4 mx-5 mb-5">
+                  <SparklineGraph data={sparkData} color="var(--color-accent)" />
+                </div>
+                <div className="grid grid-cols-3 gap-2 px-5 pb-5">
+                  {['build', 'scale', 'impact'].map((metric, metricIndex) => (
+                    <div key={metric} className="rounded-md border border-border bg-surface/40 px-2.5 py-2">
+                      <div className="text-[9px] font-mono uppercase tracking-[0.08em] text-text-dim">{metric}</div>
+                      <div className="mt-1 text-xs font-mono text-text">
+                        {String(72 + ((index + 1) * 7 + metricIndex * 5) % 24).padStart(2, '0')}%
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
           </button>
         </div>
       </article>
