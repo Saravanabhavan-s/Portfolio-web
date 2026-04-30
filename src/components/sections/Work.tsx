@@ -375,7 +375,8 @@ function TerminalOverlay({ project, onClose }: { project: Project; onClose: () =
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed inset-0 z-[200] flex items-center justify-center p-6"
+      className="fixed inset-0 z-[200] flex items-center justify-center p-3 sm:p-6"
+      style={{ touchAction: 'none' }}
       onClick={onClose}
     >
       <div className="absolute inset-0 bg-black/70 backdrop-blur-md" />
@@ -384,17 +385,31 @@ function TerminalOverlay({ project, onClose }: { project: Project; onClose: () =
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.95, opacity: 0, y: 10 }}
         transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-        className="relative w-full max-w-5xl rounded-xl border border-border bg-[#0A0A0C] overflow-hidden shadow-2xl h-[75vh] md:h-[650px] flex flex-col"
+        className="relative w-full max-w-5xl rounded-xl border border-border bg-[#0A0A0C] overflow-hidden shadow-2xl max-h-[calc(100dvh-1.5rem)] sm:max-h-[calc(100dvh-3rem)] h-[85dvh] sm:h-[75vh] md:h-[650px] flex flex-col"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="flex items-center justify-between px-5 py-3 border-b border-border shrink-0">
-          <span className="text-[11px] font-mono text-text-dim">~/{project.title.toLowerCase().replace(/\s+/g, '-')}</span>
-          <button onClick={onClose} className="text-text-dim hover:text-text transition-colors">
+        <div className="flex items-center justify-between px-3 sm:px-5 py-2.5 sm:py-3 border-b border-border shrink-0">
+          <div className="flex items-center gap-3 sm:gap-4">
+            {/* Mac-style traffic light dots */}
+            <div className="flex items-center gap-[7px]">
+              <button
+                onClick={onClose}
+                className="group/dot w-3 h-3 rounded-full bg-[#FF5F57] transition-all hover:brightness-110 flex items-center justify-center"
+                aria-label="Close terminal"
+              >
+                <FiX className="w-2 h-2 text-[#4A0002] opacity-0 group-hover/dot:opacity-100 transition-opacity" />
+              </button>
+              <span className="w-3 h-3 rounded-full bg-[#FEBC2E]" />
+              <span className="w-3 h-3 rounded-full bg-[#28C840]" />
+            </div>
+            <span className="text-[10px] sm:text-[11px] font-mono text-text-dim truncate">~/{project.title.toLowerCase().replace(/\s+/g, '-')}</span>
+          </div>
+          <button onClick={onClose} className="text-text-dim hover:text-text transition-colors sm:hidden">
             <FiX className="w-4 h-4" />
           </button>
         </div>
         <div
-          className="p-6 md:p-8 font-mono text-[13px] md:text-sm leading-[1.8] flex-1 overflow-y-auto"
+          className="p-4 sm:p-6 md:p-8 font-mono text-[11px] sm:text-[13px] md:text-sm leading-[1.7] sm:leading-[1.8] flex-1 overflow-y-auto overscroll-contain"
           data-lenis-prevent="true"
         >
           {typedLines.map((line, i) => (
