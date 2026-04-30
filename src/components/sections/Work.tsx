@@ -375,7 +375,7 @@ function TerminalOverlay({ project, onClose }: { project: Project; onClose: () =
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed inset-0 z-[200] flex items-center justify-center p-3 sm:p-6"
+      className="fixed inset-0 z-[200] flex items-center justify-center p-4 sm:p-6 md:p-8"
       style={{ touchAction: 'none' }}
       onClick={onClose}
     >
@@ -385,10 +385,10 @@ function TerminalOverlay({ project, onClose }: { project: Project; onClose: () =
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.95, opacity: 0, y: 10 }}
         transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-        className="relative w-full max-w-5xl rounded-xl border border-border bg-[#0A0A0C] overflow-hidden shadow-2xl max-h-[calc(100dvh-1.5rem)] sm:max-h-[calc(100dvh-3rem)] h-[85dvh] sm:h-[75vh] md:h-[650px] flex flex-col"
+        className="relative w-full max-w-5xl rounded-xl border border-border bg-[#0A0A0C] overflow-hidden shadow-2xl max-h-[calc(100dvh-2rem)] sm:max-h-[calc(100dvh-3rem)] h-[82dvh] sm:h-[75vh] md:h-[650px] flex flex-col"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="flex items-center justify-between px-3 sm:px-5 py-2.5 sm:py-3 border-b border-border shrink-0">
+        <div className="flex items-center justify-between px-4 sm:px-5 py-3 sm:py-3 border-b border-border shrink-0">
           <div className="flex items-center gap-3 sm:gap-4">
             {/* Mac-style traffic light dots */}
             <div className="flex items-center gap-[7px]">
@@ -409,7 +409,7 @@ function TerminalOverlay({ project, onClose }: { project: Project; onClose: () =
           </button>
         </div>
         <div
-          className="p-4 sm:p-6 md:p-8 font-mono text-[11px] sm:text-[13px] md:text-sm leading-[1.7] sm:leading-[1.8] flex-1 overflow-y-auto overscroll-contain"
+          className="p-5 sm:p-6 md:p-8 font-mono text-[11px] sm:text-[13px] md:text-sm leading-[1.8] sm:leading-[1.9] flex-1 overflow-y-auto overscroll-contain break-words"
           data-lenis-prevent="true"
         >
           {typedLines.map((line, i) => (
@@ -425,7 +425,7 @@ function TerminalOverlay({ project, onClose }: { project: Project; onClose: () =
               ) : line.startsWith('  [+]') ? (
                 <span className="text-text-muted">{line}</span>
               ) : line.startsWith('NAME:') ? (
-                <span className="text-text font-semibold text-base">{line}</span>
+                <span className="text-text font-semibold text-sm sm:text-base">{line}</span>
               ) : line.startsWith('TYPE:') ? (
                 <span className="text-accent/80 font-semibold">{line}</span>
               ) : line.startsWith('[INFO]') ? (

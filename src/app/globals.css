@@ -89,12 +89,18 @@ body {
 .section-container {
   max-width: 1200px; margin: 0 auto; padding-inline: 1.25rem;
 }
+@media (min-width: 480px) { .section-container { padding-inline: 1.5rem; } }
 @media (min-width: 768px) { .section-container { padding-inline: 2rem; } }
 @media (min-width: 1024px) { .section-container { padding-inline: 3rem; } }
 @media (min-width: 1280px) { .section-container { padding-inline: 4rem; } }
 
 .section-shell {
-  padding-block: 4.5rem;
+  padding-block: 3.5rem;
+}
+@media (min-width: 480px) {
+  .section-shell {
+    padding-block: 4.5rem;
+  }
 }
 @media (min-width: 768px) {
   .section-shell {

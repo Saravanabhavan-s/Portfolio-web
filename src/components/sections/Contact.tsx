@@ -40,7 +40,7 @@ export function Contact() {
           <span className="text-[11px] font-mono text-text-dim">~/contact</span>
         </ScrollReveal>
         <TextMaskReveal className="mb-6">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-text leading-none">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text leading-none">
             Let&apos;s talk
           </h2>
         </TextMaskReveal>
@@ -59,7 +59,7 @@ export function Contact() {
             </div>
             <div className="px-6 py-4">
               <button onClick={copyEmail} className="group relative inline-block">
-                <span className="font-mono text-lg sm:text-xl text-text-muted hover:text-text transition-colors">
+                <span className="font-mono text-sm sm:text-lg md:text-xl text-text-muted hover:text-text transition-colors break-all sm:break-normal">
                   {LINKS.email}
                 </span>
                 <span className="absolute -bottom-1 left-0 w-full h-px bg-accent origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-400" style={{ transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }} />
